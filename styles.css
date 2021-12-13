@@ -15,7 +15,8 @@ footer{
     
 }
 img{
-    image-rendering: optimizeSpeed;
+    image-rendering: -webkit-optimize-contrast;
+    
 }
 .container{
     margin-top: 128px;
